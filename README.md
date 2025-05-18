@@ -1,10 +1,16 @@
 # Kahoot
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+## Clone repo
+Run `git clone https://github.com/abushosha/kahoot.git`
 
-## Development server
+## Install node modules
+Open project directory `kahoot` then Run `npm i`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Run Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
+
+The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

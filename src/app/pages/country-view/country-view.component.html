@@ -1,0 +1,63 @@
+<div class="country-view-container">
+
+    <div *ngIf="isLoading" class="loading-spinner">
+      <mat-spinner></mat-spinner>
+      <p>Loading country details...</p>
+    </div>
+  
+    <mat-card *ngIf="!isLoading && error" class="error-card">
+        <div>{{ error }} </div>
+        <button mat-button routerLink="/">Back to Countries</button>
+    </mat-card>
+  
+    <mat-card *ngIf="!isLoading && country" class="country-card">
+      <mat-card-header>
+        <img mat-card-avatar [src]="country.flag" [alt]="country.name + ' flag'">
+        <mat-card-title>{{ country.name }}</mat-card-title>
+        <mat-card-subtitle>{{ country.region }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <h3>Details</h3>
+        <p><strong>Code (CCA3):</strong> {{ country.code }}</p>
+        <p><strong>Capital:</strong> {{ country.capital }}  -  <a href="{{country.capitalWikipediaUrl}}" target="_blank" title="Navigate to Wikipedia">Wikipedia</a></p>
+        <p><strong>Population:</strong> {{ country.population | number }}</p>
+        <p><strong>Area:</strong> {{ country.area | number }} km²</p>
+        <p><strong>Population Density:</strong> {{ getPeopleDensity() | number }} people/km²</p>
+        <p><strong>Google Map Url: </strong>  
+          <a href="{{country.googleMapUrl}}" target="_blank">{{country.googleMapUrl}}</a>
+        </p>
+        <p><strong>Languages:</strong></p>
+        <ul>
+          <li *ngFor="let language of country.languages | keyvalue">
+            {{ language.value }}
+          </li>
+        </ul>
+        <p><strong>Currencies:</strong></p>
+        <ul>
+          <li *ngFor="let currency of country.currencies | keyvalue">
+            {{ currency.value.name }} ({{ currency.value.symbol }})
+          </li>
+        </ul>
+        <p><strong>Timezones:</strong></p>
+        <ul>
+          <li *ngFor="let timezone of country.timezones">
+            {{ timezone }}
+          </li>
+        </ul>
+         
+        <p><strong>Subregion:</strong> {{ country.subregion }}</p>
+        <p><strong>Timezones:</strong></p>
+        <ul>
+          <li *ngFor="let timezone of country.timezones">
+            {{ timezone }}
+          </li>
+        </ul>
+        </mat-card-content>
+      <mat-card-actions>
+
+        <button mat-button color="primary" routerLink="/">Back to Countries</button>
+        </mat-card-actions>
+    </mat-card>
+  
+  </div>

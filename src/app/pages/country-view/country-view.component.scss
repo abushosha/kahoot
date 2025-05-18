@@ -1,0 +1,46 @@
+.country-view-container {
+    margin: 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+  }
+  
+  .country-card, .error-card {
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .country-card mat-card-header img {
+    border: 1px solid #ccc;
+    object-fit: cover;
+  } 
+  
+  .country-card .mat-card-subtitle {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .loading-spinner {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .loading-spinner p {
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .error-card {
+    text-align: center;
+    border-color: #f44336;
+  }
+  
+  .error-card mat-card-title {
+    color: #f44336;
+  }
+  
+  .country-card mat-card-content p {
+    margin-bottom: 8px;
+  }

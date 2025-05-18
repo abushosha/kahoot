@@ -1,0 +1,47 @@
+.list-countries-table-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.title {
+  text-align: center;
+  margin: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+table {
+  min-width: 800px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  text-align: center;
+}
+
+th.mat-header-cell:first-child,
+td.mat-cell:first-child {
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  padding: 0 8px;
+}
+
+.country-flag {
+  width: 40px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.10);
+  display: block;
+  margin: 0 auto;
+}
